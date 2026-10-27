@@ -1,7 +1,7 @@
 ARG gradle_version=jdk21
 ARG keycloak_version=26.4.5
 
-FROM gradle:${gradle_version} AS build
+FROM --platform=$BUILDPLATFORM gradle:${gradle_version} AS build
 
 ARG keycloak_version
 
